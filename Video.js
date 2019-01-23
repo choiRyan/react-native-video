@@ -92,6 +92,9 @@ export default class Video extends Component {
     if (this.props.onLoad) {
       this.props.onLoad(event.nativeEvent);
     }
+    if (this.state.showPoster && !this.props.audioOnly) {
+      this.setState({showPoster: false});
+    }
   };
 
   _onError = (event) => {
